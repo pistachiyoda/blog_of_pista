@@ -1,3 +1,6 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
@@ -17,7 +20,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ['~/plugins/contentful', '~/plugins/posts'],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -32,8 +35,20 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
+    '@nuxtjs/markdownit',
   ],
+
+  markdownit: {
+    injected: true,
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // allows you to use those environment variables locally
+  env: {
+    CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
+    CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
+    CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
+  },
 }
