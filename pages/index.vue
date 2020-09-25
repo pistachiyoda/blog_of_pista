@@ -1,22 +1,24 @@
 <template>
-  <main>
-    <div class="container">
-      <h1 class="title">ぴすたのブログ</h1>
-      <section v-for="post in posts" :key="post.fields.slug">
-        <div
-          class="image"
-          :style="`background: url(https:${post.fields.heroImage.fields.file.url}) center center no-repeat`"
-        ></div>
-        <h2 class="title">
-          <nuxt-link :to="post.fields.slug">{{ post.fields.title }}</nuxt-link>
-        </h2>
-        <p class="description">
-          {{ post.fields.description }}<br />
-          <nuxt-link :to="post.fields.slug" class="more">Read more ⟶</nuxt-link>
-        </p>
-      </section>
-    </div>
-  </main>
+  <div class="bg-secondary">
+    <b-container class="pt-5" style="width: 900px">
+      <blog-card
+        v-for="post in posts"
+        :key="post.fields.slug"
+        :post="post"
+      ></blog-card>
+      <div class="mx-auto" style="width: 400px">
+        <nuxt-link to="blog"
+          ><b-button
+            variant="primary"
+            pill
+            class="py-3 my-5"
+            style="width: 100%"
+            >ブログ記事をもっと見る</b-button
+          ></nuxt-link
+        >
+      </div>
+    </b-container>
+  </div>
 </template>
 
 <script>
