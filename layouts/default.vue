@@ -1,59 +1,69 @@
 <template>
   <div>
-    <header>
-      <b-container class="my-3">
-        <b-row>
-          <b-col cols="7"
-            ><h1 class="title font-weight-bold">ぴすたのブログ</h1></b-col
-          >
-          <b-col
-            ><h2>
-              <nuxt-link to="/" class="font-weight-bold">TOP</nuxt-link>
-            </h2></b-col
-          >
-          <b-col
-            ><h2>
-              <nuxt-link to="/blog" class="font-weight-bold">BLOG</nuxt-link>
-            </h2></b-col
-          >
-          <b-col
-            ><h2>
-              <nuxt-link to="/about" class="font-weight-bold">AOUBT</nuxt-link>
-            </h2></b-col
-          >
-        </b-row>
-      </b-container>
-    </header>
+    <div>
+      <b-navbar toggleable="lg" class="header">
+        <b-navbar-brand
+          ><nuxt-link to="/" class="font-weight-bold header-brand"
+            >ぴすたのブログ</nuxt-link
+          ></b-navbar-brand
+        >
+
+        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav class="header-items ml-auto">
+            <b-nav-item
+              ><nuxt-link to="/" class="font-weight-bold mr-3"
+                >TOP</nuxt-link
+              ></b-nav-item
+            >
+            <b-nav-item
+              ><nuxt-link to="/blog" class="font-weight-bold mr-3"
+                >BLOG</nuxt-link
+              ></b-nav-item
+            >
+            <b-nav-item
+              ><nuxt-link to="/about" class="font-weight-bold"
+                >AOUBT</nuxt-link
+              ></b-nav-item
+            >
+          </b-navbar-nav>
+        </b-collapse>
+      </b-navbar>
+    </div>
     <Nuxt />
-    <footer>
-      <div class="bg-secondary py-5">
-        <div class="text-center author"><u>Author</u></div>
-        <div class="d-flex justify-content-center align-items-center mt-4">
-          <img
-            src="~assets/img/profile_img.jpg"
-            alt=""
-            class="rounded-circle mr-5"
-            style="width: 300px"
-          />
-          <div>
-            <div class="font-weight-bold mb-2 author_name">ぴすたちよだ</div>
+    <footer class="bg-secondary">
+      <b-container class="py-5">
+        <div class="text-center mx-auto author mb-4">Author</div>
+        <b-row>
+          <b-col md="6" class="text-center text-md-right">
+            <img
+              src="~assets/img/profile_img.jpg"
+              alt=""
+              class="rounded-circle"
+            />
+          </b-col>
+          <b-col md="6" class="mt-3 text-center text-md-left">
+            <div class="font-weight-bold mt-4 mb-2 author_name">
+              ぴすたちよだ
+            </div>
             <p>
               ずっと駆け出しエンジニア。<br />
               最近はNuxt.js,Next.js,Railsを使ったWeb開発を勉強中。<br />
               <br />
               取得資格： <br />
-              Ruby Silver, Ruby Gold, TOEIC 875 etc...
+              Ruby Silver, TOEIC 875 etc...
             </p>
-          </div>
-        </div>
-      </div>
+          </b-col>
+        </b-row>
+      </b-container>
       <div class="bg-primary text-white text-center py-4">@pistachiyoda</div>
     </footer>
   </div>
 </template>
 
 <style>
-header {
+.header {
   font-family: 'Nico Moji';
 }
 
@@ -64,9 +74,37 @@ h2 {
 
 .author {
   font-size: 30px;
+  width: 100px;
+  border-bottom: 1px ridge rgb(82, 79, 79);
 }
 
 .author_name {
   font-size: 20px;
+}
+
+img {
+  width: 100px;
+}
+
+.header-brand {
+  font-size: 32px;
+}
+.header-items {
+  font-size: 24px;
+}
+@media screen and (min-width: 480px) {
+  .header {
+    width: 1400px;
+    margin: auto;
+  }
+  .header-brand {
+    font-size: 48px;
+  }
+  .header-items {
+    font-size: 32px;
+  }
+  img {
+    width: 300px;
+  }
 }
 </style>

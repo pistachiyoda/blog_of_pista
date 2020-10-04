@@ -1,8 +1,5 @@
 <template>
-  <section class="container">
-    <p class="back">
-      <nuxt-link to="/">⟵ Back to Home</nuxt-link>
-    </p>
+  <section class="container mb-5">
     <h1>{{ post.fields.title }}</h1>
     <div
       class="image"

@@ -1,25 +1,30 @@
 <template>
-  <section class="mb-5">
-    <nuxt-link :to="post.fields.slug">
-      <div class="d-flex">
-        <img
-          :src="post.fields.heroImage.fields.file.url"
-          alt=""
-          style="width: 350px"
-          class="rounded-l"
-        />
-        <div
-          class="d-flex flex-column justify-content-center bg-white p-4 rounded-r"
-          style="width: 100%"
-        >
-          <h2 class="title mb-3">
-            {{ post.fields.title }}
-          </h2>
-          <span
-            >🕘{{ trimmedYear }}年{{ trimmedMonth }}月{{ trimmedDate }}日
-            {{ trimmedDate }}:{{ trimmedTime }}</span
-          >
-        </div>
+  <section>
+    <nuxt-link :to="post.fields.slug" class="text-decoration-none">
+      <div>
+        <b-card no-body class="overflow-hidden blog_card">
+          <b-row no-gutters>
+            <b-col md="6">
+              <b-card-img
+                :src="post.fields.heroImage.fields.file.url"
+                alt="Image"
+              ></b-card-img>
+            </b-col>
+            <b-col md="6">
+              <b-card-body
+                class="d-flex flex-column justify-content-center h-100"
+              >
+                <b-card-title class="title">{{
+                  post.fields.title
+                }}</b-card-title>
+                <b-card-text class="publish_date"
+                  >🕘{{ trimmedYear }}年{{ trimmedMonth }}月{{ trimmedDate }}日
+                  {{ trimmedDate }}:{{ trimmedTime }}</b-card-text
+                ></b-card-body
+              >
+            </b-col>
+          </b-row>
+        </b-card>
       </div>
     </nuxt-link>
   </section>
@@ -50,13 +55,34 @@ export default {
 </script>
 
 <style scoped>
-.rounded-l {
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+.blog_card {
+  border-radius: 30px;
+}
+.title {
+  font-size: 32px;
+}
+.title:hover {
+  text-decoration: none;
+}
+.publish_date {
+  font-size: 16px;
+}
+.publish_date:hover {
+  text-decoration: none;
+}
+section {
+  margin: 24px 0;
 }
 
-.rounded-r {
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+@media screen and (min-width: 480px) {
+  section {
+    margin: 48px 0;
+  }
+  .title {
+    font-size: 40px;
+  }
+  .publish_date {
+    font-size: 24px;
+  }
 }
 </style>
