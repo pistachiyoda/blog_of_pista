@@ -19,7 +19,7 @@
                 }}</b-card-title>
                 <b-card-text class="publish_date"
                   >🕘{{ trimmedYear }}年{{ trimmedMonth }}月{{ trimmedDate }}日
-                  {{ trimmedDate }}:{{ trimmedTime }}</b-card-text
+                  {{ trimmedHour }}:{{ trimmedTime }}</b-card-text
                 ></b-card-body
               >
             </b-col>
@@ -31,26 +31,10 @@
 </template>
 
 <script>
+import Mixin from '../mixins/mixin'
 export default {
+  mixins: [Mixin],
   props: { post: Object },
-  computed: {
-    trimmedYear() {
-      return new Date(this.post.fields.publishDate).getFullYear()
-    },
-    trimmedMonth() {
-      return new Date(this.post.fields.publishDate).getMonth()
-    },
-    trimmedDate() {
-      return new Date(this.post.fields.publishDate).getDate()
-    },
-    trimmedTime() {
-      // const hour = new Date(this.post.fields.publishDate).getHours()
-      const second = (
-        '00' + new Date(this.post.fields.publishDate).getSeconds()
-      ).slice(-2)
-      return second
-    },
-  },
 }
 </script>
 
