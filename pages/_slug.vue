@@ -1,6 +1,10 @@
 <template>
   <section class="container mb-5">
-    <h1>{{ post.fields.title }}</h1>
+    <span class="d-flex justify-content-end mb-3"
+      >🕘{{ trimmedYear }}年{{ trimmedMonth }}月{{ trimmedDate }}日
+      {{ trimmedHour }}:{{ trimmedTime }}</span
+    >
+    <h1 class="mb-4">{{ post.fields.title }}</h1>
     <div
       class="image"
       :style="`background: url(https:${post.fields.heroImage.fields.file.url}) center center no-repeat`"
@@ -9,7 +13,9 @@
   </section>
 </template>
 <script>
+import Mixin from '../mixins/mixin'
 export default {
+  mixins: [Mixin],
   data() {
     return {
       slug: this.$route.params.slug,
@@ -30,3 +36,8 @@ export default {
   },
 }
 </script>
+<style>
+h1 {
+  border-bottom: 1px ridge rgb(82, 79, 79);
+}
+</style>
