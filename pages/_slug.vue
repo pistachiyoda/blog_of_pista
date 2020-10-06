@@ -13,7 +13,9 @@
   </section>
 </template>
 <script>
+import hljs from 'highlight.js'
 import Mixin from '../mixins/mixin'
+import 'highlight.js/styles/monokai-sublime.css'
 export default {
   mixins: [Mixin],
   data() {
@@ -28,6 +30,11 @@ export default {
       )
       return post[0]
     },
+  },
+  mounted() {
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightBlock(block)
+    })
   },
   head() {
     return {
