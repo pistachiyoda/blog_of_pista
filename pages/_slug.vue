@@ -47,4 +47,8 @@ export default {
 h1 {
   border-bottom: 1px ridge rgb(82, 79, 79);
 }
+
+img {
+  width: 100%;
+}
 </style>
