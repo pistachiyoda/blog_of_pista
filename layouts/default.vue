@@ -12,21 +12,21 @@
 
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="header-items ml-auto">
-            <b-nav-item
-              ><nuxt-link to="/" class="font-weight-bold mr-3"
+            <li class="nav-item">
+              <nuxt-link to="/" class="font-weight-bold mr-3 nav-link"
                 >TOP</nuxt-link
-              ></b-nav-item
-            >
-            <b-nav-item
-              ><nuxt-link to="/blog" class="font-weight-bold mr-3"
+              >
+            </li>
+            <li class="nav-item">
+              <nuxt-link to="/blog" class="font-weight-bold mr-3 nav-link"
                 >BLOG</nuxt-link
-              ></b-nav-item
-            >
-            <b-nav-item
-              ><nuxt-link to="/about" class="font-weight-bold"
+              >
+            </li>
+            <li class="nav-item">
+              <nuxt-link to="/about" class="font-weight-bold nav-link"
                 >AOUBT</nuxt-link
-              ></b-nav-item
-            >
+              >
+            </li>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
