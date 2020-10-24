@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <header>
       <b-navbar toggleable="lg" class="header">
         <b-navbar-brand
           ><nuxt-link to="/" class="font-weight-bold header-brand"
@@ -30,7 +30,7 @@
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
-    </div>
+    </header>
     <Nuxt />
     <footer class="bg-secondary">
       <b-container class="py-5">
@@ -44,9 +44,9 @@
             />
           </b-col>
           <b-col md="6" class="mt-3 text-center text-md-left">
-            <div class="font-weight-bold mt-4 mb-2 author_name">
+            <span class="font-weight-bold mt-4 mb-2 author_name">
               ぴすたちよだ
-            </div>
+            </span>
             <p>
               ずっと駆け出しエンジニア。<br />
               最近はNuxt.js,Next.js,Railsを使ったWeb開発を勉強中。<br />
@@ -57,7 +57,9 @@
           </b-col>
         </b-row>
       </b-container>
-      <div class="bg-primary text-white text-center py-4">@pistachiyoda</div>
+      <small class="bg-primary text-white text-center py-4"
+        >@pistachiyoda</small
+      >
     </footer>
   </div>
 </template>

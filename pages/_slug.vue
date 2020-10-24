@@ -1,16 +1,14 @@
 <template>
-  <section class="container mb-5">
-    <span class="d-flex justify-content-end mb-3"
-      >🕘{{ trimmedYear }}年{{ trimmedMonth }}月{{ trimmedDate }}日
-      {{ trimmedHour }}:{{ trimmedTime }}</span
-    >
-    <h1 class="mb-4">{{ post.fields.title }}</h1>
-    <div
-      class="image"
-      :style="`background: url(https:${post.fields.heroImage.fields.file.url}) center center no-repeat`"
-    ></div>
-    <article v-html="$md.render(post.fields.body)"></article>
-  </section>
+  <main>
+    <section class="container mb-5">
+      <time :datetime="trimmedDateTime" class="d-flex justify-content-end mb-3"
+        >🕘{{ trimmedYear }}年{{ trimmedMonth }}月{{ trimmedDate }}日
+        {{ trimmedHour }}:{{ trimmedTime }}</time
+      >
+      <h1 class="mb-4">{{ post.fields.title }}</h1>
+      <article v-html="$md.render(post.fields.body)"></article>
+    </section>
+  </main>
 </template>
 <script>
 import hljs from 'highlight.js'

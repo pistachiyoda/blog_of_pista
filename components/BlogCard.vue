@@ -17,10 +17,12 @@
                 <b-card-title class="title">{{
                   post.fields.title
                 }}</b-card-title>
-                <b-card-text class="publish_date"
-                  >🕘{{ trimmedYear }}年{{ trimmedMonth }}月{{ trimmedDate }}日
-                  {{ trimmedHour }}:{{ trimmedTime }}</b-card-text
-                ></b-card-body
+                <b-card-text class="publish_date">
+                  <time :datetime="trimmedDateTime">
+                    🕘{{ trimmedYear }}年{{ trimmedMonth }}月{{ trimmedDate }}日
+                    {{ trimmedHour }}:{{ trimmedTime }}
+                  </time>
+                </b-card-text></b-card-body
               >
             </b-col>
           </b-row>

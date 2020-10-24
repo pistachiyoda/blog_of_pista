@@ -1,5 +1,8 @@
 export default {
   computed: {
+    trimmedDateTime() {
+      return new Date(this.post.fields.publishDate).toISOString()
+    },
     trimmedYear() {
       return new Date(this.post.fields.publishDate).getFullYear()
     },
