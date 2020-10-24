@@ -52,7 +52,7 @@
               最近はNuxt.js,Next.js,Railsを使ったWeb開発を勉強中。<br />
               <br />
               取得資格： <br />
-              Ruby Silver, TOEIC 875 etc...
+              Ruby Silver, Ruby Gold, HTML5 Professional Lv.1, TOEIC 875 etc...
             </p>
           </b-col>
         </b-row>
