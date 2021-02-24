@@ -28,8 +28,9 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/earlyaccess/nicomoji.css',
+        href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap',
       },
+      { rel: "stylesheet", href:"https://use.fontawesome.com/releases/v5.6.1/css/all.css"}
     ],
   },
 

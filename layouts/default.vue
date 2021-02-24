@@ -1,35 +1,13 @@
 <template>
   <div>
-    <header>
-      <b-navbar toggleable="lg" class="header">
-        <b-navbar-brand
-          ><nuxt-link to="/" class="font-weight-bold header-brand"
-            >ぴすたのブログ</nuxt-link
-          ></b-navbar-brand
-        >
-
-        <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-        <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav class="header-items ml-auto">
-            <li class="nav-item">
-              <nuxt-link to="/" class="font-weight-bold mr-3 nav-link"
-                >TOP</nuxt-link
-              >
-            </li>
-            <li class="nav-item">
-              <nuxt-link to="/blog" class="font-weight-bold mr-3 nav-link"
-                >BLOG</nuxt-link
-              >
-            </li>
-            <li class="nav-item">
-              <nuxt-link to="/about" class="font-weight-bold nav-link"
-                >AOUBT</nuxt-link
-              >
-            </li>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-navbar>
+    <header class="bg-white sticky-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div></div>
+        <h1>Pista's blog</h1>
+        <a href="https://twitter.com/pistachiyoda">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
     </header>
     <Nuxt />
     <footer class="bg-secondary">
@@ -65,11 +43,22 @@
 </template>
 
 <style>
-.header {
-  font-family: 'Nico Moji';
+header {
+  font-family: 'Montserrat', sans-serif;
 }
 
-h1,
+header > div {
+  height: 70px;
+}
+
+header h1 {
+  font-size: 25px;
+}
+
+header a {
+  font-size: 30px;
+}
+
 h2 {
   margin: 0;
 }
@@ -88,22 +77,9 @@ img {
   width: 100px;
 }
 
-.header-brand {
-  font-size: 32px;
-}
-.header-items {
-  font-size: 24px;
-}
 @media screen and (min-width: 480px) {
   .header {
-    width: 1400px;
     margin: auto;
-  }
-  .header-brand {
-    font-size: 48px;
-  }
-  .header-items {
-    font-size: 32px;
   }
   img {
     width: 300px;

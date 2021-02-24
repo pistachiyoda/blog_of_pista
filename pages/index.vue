@@ -33,7 +33,6 @@ export default {
 }
 @media screen and (min-width: 480px) {
   .post_wrapper {
-    width: 900px;
     font-size: 16px;
   }
   .more_blog_btn {
