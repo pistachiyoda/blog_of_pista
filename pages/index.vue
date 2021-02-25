@@ -13,11 +13,6 @@
           <blog-card :post="post"></blog-card>
         </b-col>
       </b-row>
-      <nuxt-link to="blog" class="more_blog_btn mx-auto d-block"
-        ><b-button variant="primary" pill class="py-3 my-5 w-100"
-          >ブログ記事をもっと見る</b-button
-        ></nuxt-link
-      >
     </b-container>
   </main>
 </template>
