@@ -3,7 +3,7 @@
     <header class="bg-white sticky-top">
       <div class="container d-flex justify-content-between align-items-center">
         <div></div>
-        <h1>Pista's blog</h1>
+        <nuxt-link to="/"><h1>Pista's blog</h1></nuxt-link>
         <a href="https://twitter.com/pistachiyoda">
           <i class="fab fa-twitter"></i>
         </a>
@@ -45,6 +45,10 @@
 <style>
 header {
   font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 header > div {
