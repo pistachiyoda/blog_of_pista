@@ -1,11 +1,18 @@
 <template>
-  <main class="bg-secondary">
-    <b-container class="pt-1 post_wrapper">
-      <blog-card
-        v-for="post in posts"
-        :key="post.fields.slug"
-        :post="post"
-      ></blog-card>
+  <main class="bg-light">
+    <b-container class="post_wrapper pt-3">
+      <b-row>
+        <b-col
+          v-for="post in posts"
+          :key="post.fields.slug"
+          class="my-2"
+          md="4"
+          sm="6"
+          xs="12"
+        >
+          <blog-card :post="post"></blog-card>
+        </b-col>
+      </b-row>
       <nuxt-link to="blog" class="more_blog_btn mx-auto d-block"
         ><b-button variant="primary" pill class="py-3 my-5 w-100"
           >ブログ記事をもっと見る</b-button
