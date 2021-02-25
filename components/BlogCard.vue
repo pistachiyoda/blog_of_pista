@@ -2,27 +2,20 @@
   <section>
     <nuxt-link :to="post.fields.slug" class="text-decoration-none">
       <div>
-        <b-card no-body class="overflow-hidden blog_card">
+        <b-card no-body class="overflow-hidden blog_card border-white">
           <b-row no-gutters>
-            <b-col md="6">
-              <b-card-img
-                :src="post.fields.heroImage.fields.file.url"
-                alt="Image"
-              ></b-card-img>
-            </b-col>
-            <b-col md="6">
+            <b-col>
               <b-card-body
                 class="d-flex flex-column justify-content-center h-100"
               >
-                <b-card-title class="title">{{
-                  post.fields.title
-                }}</b-card-title>
                 <b-card-text class="publish_date">
                   <time :datetime="trimmedDateTime">
-                    🕘{{ trimmedYear }}年{{ trimmedMonth }}月{{ trimmedDate }}日
-                    {{ trimmedHour }}:{{ trimmedTime }}
+                    {{ trimmedYear }}/{{ trimmedMonth }}/{{ trimmedDate }}
                   </time>
-                </b-card-text></b-card-body
+                </b-card-text>
+                <b-card-title class="title">{{
+                  post.fields.title
+                }}</b-card-title></b-card-body
               >
             </b-col>
           </b-row>
@@ -42,10 +35,12 @@ export default {
 
 <style scoped>
 .blog_card {
-  border-radius: 30px;
+  border-radius: 10px;
 }
 .title {
-  font-size: 32px;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: bold;
 }
 .title:hover {
   text-decoration: none;
@@ -56,19 +51,10 @@ export default {
 .publish_date:hover {
   text-decoration: none;
 }
-section {
-  margin: 24px 0;
-}
 
 @media screen and (min-width: 480px) {
-  section {
-    margin: 48px 0;
-  }
-  .title {
-    font-size: 40px;
-  }
-  .publish_date {
-    font-size: 24px;
+  .blog_card {
+    height: 198px;
   }
 }
 </style>
