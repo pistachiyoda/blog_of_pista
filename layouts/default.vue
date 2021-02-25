@@ -10,10 +10,8 @@
       </div>
     </header>
     <Nuxt />
-    <footer class="bg-light">
-      <small class="bg-primary text-white text-center py-4"
-        >@pistachiyoda</small
-      >
+    <footer class="fixed-bottom bg-light pb-4">
+      <small class="d-flex justify-content-center">@pistachiyoda</small>
     </footer>
   </div>
 </template>
@@ -21,6 +19,11 @@
 <style>
 header {
   font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
 }
 
 a:hover {
