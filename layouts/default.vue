@@ -10,7 +10,7 @@
       </div>
     </header>
     <Nuxt />
-    <footer class="fixed-bottom bg-light pb-4">
+    <footer class="bg-light pb-4">
       <small class="d-flex justify-content-center">@pistachiyoda</small>
     </footer>
   </div>

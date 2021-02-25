@@ -1,6 +1,6 @@
 <template>
   <main class="bg-light">
-    <b-container class="post_wrapper pt-3">
+    <b-container class="post_wrapper py-3">
       <b-row>
         <b-col
           v-for="post in posts"
