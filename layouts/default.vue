@@ -3,38 +3,14 @@
     <header class="bg-white sticky-top">
       <div class="container d-flex justify-content-between align-items-center">
         <div></div>
-        <nuxt-link to="/"><h1>Pista's blog</h1></nuxt-link>
+        <nuxt-link to="/"><h1>Pista's note</h1></nuxt-link>
         <a href="https://twitter.com/pistachiyoda">
           <i class="fab fa-twitter"></i>
         </a>
       </div>
     </header>
     <Nuxt />
-    <footer class="bg-secondary">
-      <b-container class="py-5">
-        <div class="text-center mx-auto author mb-4">Author</div>
-        <b-row>
-          <b-col md="6" class="text-center text-md-right">
-            <img
-              src="~assets/img/profile_img.jpg"
-              alt=""
-              class="rounded-circle"
-            />
-          </b-col>
-          <b-col md="6" class="mt-3 text-center text-md-left">
-            <span class="font-weight-bold mt-4 mb-2 author_name">
-              ぴすたちよだ
-            </span>
-            <p>
-              ずっと駆け出しエンジニア。<br />
-              最近はNuxt.js,Next.js,Railsを使ったWeb開発を勉強中。<br />
-              <br />
-              取得資格： <br />
-              Ruby Silver, Ruby Gold, HTML5 Professional Lv.1, TOEIC 875 etc...
-            </p>
-          </b-col>
-        </b-row>
-      </b-container>
+    <footer class="bg-light">
       <small class="bg-primary text-white text-center py-4"
         >@pistachiyoda</small
       >
